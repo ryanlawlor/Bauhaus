@@ -1,0 +1,349 @@
+$adidas: #010028;
+$netflix: #E8CFB0;
+$nasa: #F2DDC8;
+
+*{
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+@mixin laptop{
+    @media only screen and (max-width: 1100px){
+        @content;
+    }
+}
+@mixin tablet{
+    @media only screen and (max-width: 850px){
+        @content;
+    }
+}
+@mixin phone{
+    @media only screen and (max-width: 550px){
+        @content;
+    }
+}
+@mixin small-phone{
+    @media only screen and (max-width: 350px){
+        @content;
+    }
+}
+
+.site-wrapper{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+a::after{
+    content: "";
+    display: block;
+    width: 0px;
+    height: 1px;
+    position: relative;
+    background-color: inherit;
+    transition: 0.5s;
+    // opacity: 0.5;
+}
+a:hover::after{
+    width: 100%;
+}
+
+.container{
+    height: 85vh;
+    width: 100%;
+    padding: 50px 0px;
+    text-align: center;
+
+    .intro-wrapper{
+        width: 800px;
+        margin: 0 auto;
+        font-size: 9vw;
+
+        transform: translate3d(0,0,0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+        animation: fadeInUp 1s ease;
+
+        @include tablet{
+            width: 90%;
+            font-size: 12vw;
+        }
+        @include phone{
+            width: 90%;
+            font-size: 18vw;
+        }
+
+        .site-title{
+            margin-top: 100px;
+        }
+
+        .colophon{
+            font-size: 14px;
+            font-weight: 400;
+            margin: 50px auto;
+            color: #999;
+            width: 90%;
+            text-align: left;
+
+            .column1{
+                display: inline-block;
+                vertical-align: top;
+                margin: 10px 10px 10px 25px;
+                width: 66%;
+
+                @include tablet{
+                    width: 90%;
+                    display: block;
+                    margin: 25px auto;
+                }
+            }
+            .column2{
+                display: inline-block;
+                vertical-align: top;
+                margin: 10px;
+                width: 25%;
+
+                @include tablet{
+                    width: 90%;
+                    display: block;
+                    margin: 25px auto;
+                }
+            }
+
+            a{
+                color: #222;
+            }
+            a::after{
+                background-color: #222;
+                bottom: 0.1em;
+            }
+        }
+    }
+
+    h1{
+        font-size: 1em;
+        font-weight: 600;
+
+        // @include tablet{
+        //     font-size: 130px;
+        // }
+        // @include phone{
+        //     font-size: 70px;
+        // }
+        // @include small-phone{
+        //     font-size: 40px;
+        // }
+        
+    }
+    h2{
+        font-size: 0.25em;
+        width: 80%;
+        margin: 0 auto;
+
+        // @include tablet{
+        //     font-size: 24px;
+        // }
+        // @include phone{
+        //     font-size: 20px;
+        // }
+        
+    }
+
+
+}
+
+.logo{
+    display: flex;
+
+    @include laptop{
+        display: block;
+    }
+
+    .content{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 90%;
+        
+        @include laptop{
+            margin: auto;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+    }
+
+    .logo-wrapper{
+        width: 700px;
+        height: 700px;
+        padding: 0 auto;
+        flex-shrink: 1;
+
+        @include laptop{
+            width: 60%;
+            height: fit-content;
+            margin: 0;
+            display: block;
+        }
+        @include tablet{
+            width: 80%;
+        }
+        @include phone{
+            width: 90%;
+        }
+    
+        img{
+            width: 100%;
+            aspect-ratio: 1;
+        }
+    }
+    
+    .text-wrapper{
+        padding: 50px auto;
+        max-width: 600px;
+    
+        h1{
+            font-size: 75px;
+
+            @include laptop{
+                font-size: 50px;
+            }
+            @include small-phone{
+                font-size: 30px;
+            }
+        }
+        h2{
+            font-size: 12px;
+            font-weight: 400;
+        }
+        
+    }
+}
+
+.left{
+    padding-right: 0px;
+}
+
+.right{
+    padding-left: 0px;
+    flex-direction: row-reverse;
+}
+
+.container1{
+    background-color: #EEF0BF;
+    color: $adidas;
+    a::after{
+        background-color: #010028;
+    }
+}
+.container2{
+    background-color: #0A0607;
+    color: #E8CFB0;
+    a::after{
+        background-color: #E8CFB0;
+    }
+}
+.container3{
+    background-color: #B03827;
+    color: #F2DDC8;
+    a::after{
+        background-color: #F2DDC8;
+    }
+}
+.container4{
+    background-color: #4A3151;
+    color: #E56F53;
+    a::after{
+        background-color: #E56F53;
+    }
+    
+}
+.container5{
+    background-color: #F6C739;
+    color: #0D0C0C;
+    a::after{
+        background-color: #0D0C0C;
+    }
+}
+.container6{
+    background-color: #000000;
+    color: #F9F2E5;
+    a::after{
+        background-color: #F9F2E5;
+    }
+}
+.container7{
+    background-color: #0F5092;
+    color: #E4E1DC;
+    a::after{
+        background-color: #E4E1DC;
+    }
+}
+.container8{
+    background-color: #0E0F14;
+    color: #F4F4DC;
+    a::after{
+        background-color: #F4F4DC;
+    }
+}
+.container9{
+    background-color: #ED2124;
+    color: #FBF9E2;
+    a::after{
+        background-color: #FBF9E2;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(175, 175, 175);
+    border: 3px solid white;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        overflow: visible;
+    }
+}
+
+.scrollFade {
+    opacity: 1;
+    pointer-events: all;
+}
+.scrollFade--hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.scrollFade--visible {
+    opacity: 1;
+    pointer-events: all;
+}
+.scrollFade--animate {
+    transition: opacity 0.5s ease-in-out;
+    
+    // transform: translate3d(0,0,0);
+    // backface-visibility: hidden;
+    // perspective: 1000px;
+    // animation: fadeInUp 1s ease;
+}

@@ -1,0 +1,327 @@
+* {
+  font-family: "Montserrat Alternates", sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.site-wrapper {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+a::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 1px;
+  position: relative;
+  background-color: inherit;
+  transition: 0.5s;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+.container {
+  height: 85vh;
+  width: 100%;
+  padding: 50px 0px;
+  text-align: center;
+}
+.container .intro-wrapper {
+  width: 800px;
+  margin: 0 auto;
+  font-size: 9vw;
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  perspective: 1000px;
+  -webkit-animation: fadeInUp 1s ease;
+          animation: fadeInUp 1s ease;
+}
+@media only screen and (max-width: 850px) {
+  .container .intro-wrapper {
+    width: 90%;
+    font-size: 12vw;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .container .intro-wrapper {
+    width: 90%;
+    font-size: 18vw;
+  }
+}
+.container .intro-wrapper .site-title {
+  margin-top: 100px;
+}
+.container .intro-wrapper .colophon {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 50px auto;
+  color: #999;
+  width: 90%;
+  text-align: left;
+}
+.container .intro-wrapper .colophon .column1 {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 10px 10px 25px;
+  width: 66%;
+}
+@media only screen and (max-width: 850px) {
+  .container .intro-wrapper .colophon .column1 {
+    width: 90%;
+    display: block;
+    margin: 25px auto;
+  }
+}
+.container .intro-wrapper .colophon .column2 {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+  width: 25%;
+}
+@media only screen and (max-width: 850px) {
+  .container .intro-wrapper .colophon .column2 {
+    width: 90%;
+    display: block;
+    margin: 25px auto;
+  }
+}
+.container .intro-wrapper .colophon a {
+  color: #222;
+}
+.container .intro-wrapper .colophon a::after {
+  background-color: #222;
+  bottom: 0.1em;
+}
+.container h1 {
+  font-size: 1em;
+  font-weight: 600;
+}
+.container h2 {
+  font-size: 0.25em;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+}
+@media only screen and (max-width: 1100px) {
+  .logo {
+    display: block;
+  }
+}
+.logo .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 90%;
+}
+@media only screen and (max-width: 1100px) {
+  .logo .content {
+    margin: auto;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+}
+.logo .logo-wrapper {
+  width: 700px;
+  height: 700px;
+  padding: 0 auto;
+  flex-shrink: 1;
+}
+@media only screen and (max-width: 1100px) {
+  .logo .logo-wrapper {
+    width: 60%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0;
+    display: block;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .logo .logo-wrapper {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .logo .logo-wrapper {
+    width: 90%;
+  }
+}
+.logo .logo-wrapper img {
+  width: 100%;
+  aspect-ratio: 1;
+}
+.logo .text-wrapper {
+  padding: 50px auto;
+  max-width: 600px;
+}
+.logo .text-wrapper h1 {
+  font-size: 75px;
+}
+@media only screen and (max-width: 1100px) {
+  .logo .text-wrapper h1 {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .logo .text-wrapper h1 {
+    font-size: 30px;
+  }
+}
+.logo .text-wrapper h2 {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.left {
+  padding-right: 0px;
+}
+
+.right {
+  padding-left: 0px;
+  flex-direction: row-reverse;
+}
+
+.container1 {
+  background-color: #EEF0BF;
+  color: #010028;
+}
+.container1 a::after {
+  background-color: #010028;
+}
+
+.container2 {
+  background-color: #0A0607;
+  color: #E8CFB0;
+}
+.container2 a::after {
+  background-color: #E8CFB0;
+}
+
+.container3 {
+  background-color: #B03827;
+  color: #F2DDC8;
+}
+.container3 a::after {
+  background-color: #F2DDC8;
+}
+
+.container4 {
+  background-color: #4A3151;
+  color: #E56F53;
+}
+.container4 a::after {
+  background-color: #E56F53;
+}
+
+.container5 {
+  background-color: #F6C739;
+  color: #0D0C0C;
+}
+.container5 a::after {
+  background-color: #0D0C0C;
+}
+
+.container6 {
+  background-color: #000000;
+  color: #F9F2E5;
+}
+.container6 a::after {
+  background-color: #F9F2E5;
+}
+
+.container7 {
+  background-color: #0F5092;
+  color: #E4E1DC;
+}
+.container7 a::after {
+  background-color: #E4E1DC;
+}
+
+.container8 {
+  background-color: #0E0F14;
+  color: #F4F4DC;
+}
+.container8 a::after {
+  background-color: #F4F4DC;
+}
+
+.container9 {
+  background-color: #ED2124;
+  color: #FBF9E2;
+}
+.container9 a::after {
+  background-color: #FBF9E2;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(175, 175, 175);
+  border: 3px solid white;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    overflow: visible;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    overflow: visible;
+  }
+}
+.scrollFade {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.scrollFade--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scrollFade--visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.scrollFade--animate {
+  transition: opacity 0.5s ease-in-out;
+}/*# sourceMappingURL=style.css.map */
