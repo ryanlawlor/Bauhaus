@@ -163,6 +163,55 @@ a:hover::after{
 
 }
 
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-scroll{
+
+    height: 12rem;
+    padding: 20px 0;
+    overflow: hidden;
+    max-width: 90%;
+    width: 90%;
+    margin: 0 auto;	
+	position: relative;
+	display: flex;
+    animation: fadeIn 3s ease forwards;
+    visibility: hidden;
+    animation-delay: .5s;
+
+    .scroller{
+
+        display: flex;
+		position: relative;
+		animation: scroll 60s linear infinite;
+        justify-content: space-around;
+
+        img{
+            border-radius: 10px;
+            // box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
+            display: block;
+            height: 90%;
+            margin: auto 2vw;
+        }
+
+        
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: linear-gradient(to right, white, rgba(white, 0) 20%, rgba(white, 0) calc(100% - 20%), white);
+    }
+}
+
 .logo{
     display: flex;
 
@@ -329,6 +378,21 @@ a:hover::after{
         transform: translateY(0);
         overflow: visible;
     }
+}
+@keyframes fadeIn {
+    0% {
+        visibility: visible;
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+@keyframes scroll {
+	0%   { transform: translateX(0%); }
+	100% { transform: translateX(-100%); }
 }
 
 .scrollFade {
